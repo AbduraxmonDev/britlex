@@ -1,0 +1,13 @@
+@import "./variables";
+@import "./normalize";
+@import "./mixins/mixins";
+@import "./mixins/media-mixins";
+
+// Layout
+@import "./components/header";
+@import "./components/languages";
+@import "./components/skills";
+@import "./components/about-us";
+@import "./components/pricing";
+@import "./components/contact-us";
+@import "./components/footer";

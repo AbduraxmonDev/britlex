@@ -1,0 +1,9 @@
+@mixin flex($alignItem: center, $justifyContent: space-between) {
+    display: flex;
+    align-items: $alignItem;
+    justify-content: $justifyContent;
+}
+
+// @mixin adaptiveValue($maxValue: 8, $minValue: 16) {
+//     font-size: calc($maxValue + $minValue * (100vw / 1400));
+// }
