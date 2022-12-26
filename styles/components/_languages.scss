@@ -1,0 +1,74 @@
+.language-section {
+    margin-block:50px;
+    @include flex();
+    &__info {
+        @include flex(flex-start);
+        flex-direction: column;
+    }
+    @media screen and (max-width: 575px) {
+        @include flex();
+        flex-direction: column-reverse;
+        &__info{
+            @include flex(center);
+            text-align: center
+        }
+    }
+}
+.info {
+    &__header {
+        @include flex();
+        padding-bottom: calc(10px + 30 * (100vw / 1400));
+    }
+    &__title {
+        font-size:   calc(8px + 35 * (100vw / 1400));
+        font-weight: 600;
+    }
+    &__icon {
+        position: absolute;
+        top: calc(85px + 230 * (100vw / 1400));
+        left: calc(70px + 210 * (100vw / 1400));
+        width: calc(20px + 80 * (100vw / 1400));
+    }
+    &__subtitle {
+        padding-bottom: calc(10px + 30 * (100vw / 1400));
+        font-size: calc(6px + 14 * (100vw / 1400));
+        color: $textGrayColor;
+        max-width: 526px;
+    }
+    &__button {
+        padding-inline: calc(30px + 35 * (100vw / 1400));
+        padding-block: calc(8px + 16  * (100vw / 1400));
+        font-size: calc(8px + 14 * (100vw / 1400));
+        font-weight: 500;
+        background: $buttonBackground;
+        color: $textHoverColor;
+        border-radius: $borderRadius;
+        transition: all 0.4s;
+        &:hover{
+            background: none;
+            color: $textColor;
+        }
+        &:focus{
+            background: none;
+            color: $textColor;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &__icon{
+            display: none;
+        }
+        &__title{
+           br{
+            display: none;
+           }
+        }
+        &__button{
+            width: 100%;
+        }
+    }
+}
+.language {
+    &__picture {
+        width: calc(200px + 352 * (100vw / 1400));
+    }
+}
