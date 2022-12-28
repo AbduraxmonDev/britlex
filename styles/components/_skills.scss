@@ -1,0 +1,160 @@
+.skills-section {
+    &__title {
+        text-align: center;
+        padding-bottom: calc(50px + 40 * (100vw / 1400));
+        font-size:   calc(8px + 35 * (100vw / 1400));
+    }
+    &__content {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
+    &__card {
+        background-color: $cardBackground;
+        border-radius: $borderRadius;
+        padding: 0 30px 30px 30px;
+    }
+}
+
+.card {
+    &__title {
+        padding-bottom: 40px;
+        font-size:   calc(8px + 25 * (100vw / 1400));
+    }
+    &__text {
+        padding-bottom: 40px;
+        color: $gray;
+        font-size: calc(6px + 10  * (100vw / 1400));
+    }
+    &__button {
+        padding-inline: 30px;
+        padding-block: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        background: $mainColor;
+        color: $white;
+        border-radius: $borderRadius;
+        transition: all 0.4s;
+        &:hover{
+            background: none;
+            color: $mainColor;
+        }
+        &:focus{
+            background: none;
+            color: $mainColor;
+        }
+    }
+    @media screen and (max-width: 970px) {
+        &__button{
+            font-size: 14px;
+            padding-block: 15px;
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        &__button{
+            width: 70%;
+        }
+    }
+}
+.sidebar {
+    @include flex();
+    flex-direction: column;
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    .card__title{
+        padding-bottom: 60px;
+    }
+    .card__text{
+        padding-bottom: 60px;
+    }
+    .card__img{
+        width: calc(150px + 100 * (100vw / 1400));
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+    @media screen and (max-width: 970px) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+    @media screen and (max-width: 650px) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+        .card__title{
+            padding-bottom: 40px;
+        }
+        .card__text{
+            padding-bottom: 40px;
+        }
+    }
+}
+.article-1 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    .card__img{
+        padding-bottom: 30px;
+        width: calc(180px + 60 * (100vw / 1400));
+    }
+    @media screen and (max-width: 970px) {
+        .card__img{
+            padding-top: 40px;
+        }
+        .card__text{
+            padding-bottom: 180px;
+        }
+        @media screen and (max-width: 650px) {
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+            .card__text{
+                padding-bottom: 40px;
+            }
+        }
+    }
+}
+.article-2 {
+    grid-row:1/2;
+    grid-column: 3/4; 
+    .card__img{
+        width: calc(185px + 60 * (100vw / 1400));
+        padding-block: 55px;
+    }
+    @media screen and (max-width: 970px) {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    @media screen and (max-width: 650px) {
+        grid-row: 3 / 4;
+        grid-column: 1 / 3;
+        .card__img{
+            padding-block: 40px
+        }
+    }
+}
+.subarticle {
+    @include flex();
+    flex-direction: row-reverse;
+    padding-top: 30px;
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+    .card__img{
+        width: calc(150px + 100 * (100vw / 1400));
+    }
+    @media screen and (max-width: 970px) {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        @include flex();
+        flex-direction: column;
+        padding: 60px 30px 30px 30px;
+        .card__text{
+            padding-bottom: 60px;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        grid-row: 4 / 5;
+        grid-column: 1 / 3;
+        .card__text{
+            padding-bottom: 40px;
+        }
+    }
+}

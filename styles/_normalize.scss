@@ -21,6 +21,10 @@ button {
     cursor: pointer;
 }
 
+.main{
+    margin-top: 150px;
+}
+
 .wrapper{
     overflow: hidden;
 }
@@ -28,6 +32,6 @@ button {
 .container{
     max-width: 1400px;
     width: 100%;
-    padding: 30px;
+    padding: calc(20px + 10 * (100vw / 1400));
     margin: 0 auto;
 }

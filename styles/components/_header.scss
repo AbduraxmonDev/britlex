@@ -1,13 +1,22 @@
 .header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
     &__container{
         @include flex();
         position: relative;
+        .logo__img{
+            position: absolute;
+            top: 17px ;
+            z-index: 2;
+        }
     }
     .menu{
         @include flex();
         &__list{
             @include flex();
-            margin-right: calc(5px + 100 * (100vw / 1400));
+            margin-right: calc(5px + 90 * (100vw / 1400));
             margin-left: 10px;
         }
         &__item:not(:last-child){
@@ -15,14 +24,14 @@
         }
         &__link{
             position: relative;
-            color: $textColor;
+            color: $mainColor;
             &:after{
                 content: '';
                 position: absolute;
                 display: block;
                 width: 0%;
                 height: 2px;
-                background-color: $borderColor;
+                background-color: $mainColor;
                 transition: width 0.4s;
                 right: 0%;
             }
@@ -32,7 +41,7 @@
                 left: 0%;    
             }
             &:focus{
-                border-bottom: 3px solid $borderColor;
+                border-bottom: 3px solid $mainColor;
             }
         }
         @media screen and (max-width: 767px) {
@@ -42,12 +51,12 @@
         height: 100vh;
         right: -100%;
         top: 0;
-        background-color: rgba(255, 255, 255, 1);
-        border-left: 1px solid $borderColor;
-        border-block: 1px solid $borderColor;
+        background-color: rgba(255, 255, 255, 1); // liner gradient
+        border-left: 1px solid $mainColor;
+        border-block: 1px solid $mainColor;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
-        padding: 80px 20px 20px 20px;
+        padding: 120px 20px 20px 20px;
         transition: transform .5s;
         overflow: hidden;    
         &__list{
@@ -58,14 +67,14 @@
             margin-bottom: 15px;
         }
         &__link{
-            color: $textColor; 
+            color: $mainColor; 
             &:after{
                 content: '';
                 position: absolute;
                 display: block;
                 width: 0%;
                 height: 2px;
-                background-color: $textColor;
+                background-color: $mainColor;
                 transition: width 0.4s;
                 right: 0%;
             }
@@ -83,16 +92,16 @@
         font-size: calc(8px + 16 * (100vw / 1400));
         font-weight: 500;
         background: none;
-        color: $textColor;
+        color: $mainColor;
         border-radius: $borderRadius;
         transition: all 0.4s;
         &:hover{
-            background-color: $buttonBackground;
-            color: $textHoverColor;
+            background-color: $mainColor;
+            color: $white;
         }
         &:focus{
-            color: $textHoverColor;
-            background-color: $buttonBackground;
+            color: $white;
+            background-color: $mainColor;
         }
     }
     &__burger-btn{
@@ -109,7 +118,7 @@
             width: 30px;
             height: 3px;
             left: 5px;
-            background-color: $buttonBackground;
+            background-color: $mainColor;
             transition: transform .5s, opacity .5s, background-color .5s;
             &:nth-child(1) {
                 transform: translateY(-8px);
@@ -122,10 +131,14 @@
     }
     @media screen and (max-width: 767px ) {
         &__button{
-            background-color: $buttonOpenBackground;
+            background-color: $white;
         }
         &__burger-btn{
             display: block;
+        }
+        .logo__img{
+            top: 4px;
+            z-index: 2;
         }
     }
     &.open{
@@ -135,14 +148,14 @@
         .header__burger-btn{
             span:nth-child(1) {
                 transform: translateY(0) rotate(45deg);
-                width: 22px;
+                width: 26px;
             }
             span:nth-child(2) {
                 opacity: 0;
             }
             span:nth-child(3) {
                 transform: translateY(0) rotate(-45deg);
-                width: 22px;
+                width: 26px;
             }
         }
         @media screen and (max-width: 767px) {

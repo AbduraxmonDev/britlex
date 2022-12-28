@@ -24,15 +24,12 @@
         font-weight: 600;
     }
     &__icon {
-        position: absolute;
-        top: calc(85px + 230 * (100vw / 1400));
-        left: calc(70px + 210 * (100vw / 1400));
         width: calc(20px + 80 * (100vw / 1400));
     }
     &__subtitle {
         padding-bottom: calc(10px + 30 * (100vw / 1400));
         font-size: calc(6px + 14 * (100vw / 1400));
-        color: $textGrayColor;
+        color: $gray;
         max-width: 526px;
     }
     &__button {
@@ -40,17 +37,17 @@
         padding-block: calc(8px + 16  * (100vw / 1400));
         font-size: calc(8px + 14 * (100vw / 1400));
         font-weight: 500;
-        background: $buttonBackground;
-        color: $textHoverColor;
+        background: $mainColor;
+        color: $white;
         border-radius: $borderRadius;
         transition: all 0.4s;
         &:hover{
             background: none;
-            color: $textColor;
+            color: $mainColor;
         }
         &:focus{
             background: none;
-            color: $textColor;
+            color: $mainColor;
         }
     }
     @media screen and (max-width: 575px) {
@@ -63,12 +60,12 @@
            }
         }
         &__button{
-            width: 100%;
+            width: 250px;
         }
     }
 }
 .language {
     &__picture {
-        width: calc(200px + 352 * (100vw / 1400));
+        width: calc(180px + 350 * (100vw / 1400));
     }
 }
