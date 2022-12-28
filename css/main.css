@@ -468,6 +468,9 @@ button {
   .subarticle .card__text {
     padding-bottom: 40px;
   }
+  .subarticle .card__img {
+    padding-bottom: 40px;
+  }
 }
 
 .aboutus-section {
