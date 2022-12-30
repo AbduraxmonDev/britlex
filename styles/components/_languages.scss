@@ -28,7 +28,7 @@
     }
     &__subtitle {
         padding-bottom: calc(10px + 30 * (100vw / 1400));
-        font-size: calc(6px + 14 * (100vw / 1400));
+        font-size: calc(10px + 10 * (100vw / 1400));
         color: $gray;
         max-width: 526px;
     }

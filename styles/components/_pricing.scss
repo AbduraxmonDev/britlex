@@ -17,10 +17,10 @@
         flex-direction: column;
         padding: 20px;
         .card__title{
-            font-size: calc(8px + 15 * (100vw / 1400));
+            font-size: calc(10px + 15 * (100vw / 1400));
         }
         .card__text{
-            font-size: calc(10px + 6 * (100vw / 1400));
+            font-size: calc(10px + 10  * (100vw / 1400));
         }
         .card__price{
             padding: 10px 20px;
