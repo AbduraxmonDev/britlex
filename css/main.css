@@ -793,9 +793,32 @@ button {
   background: #253137;
   color: #FFFFFF;
   border-radius: 10px;
-  transition: all 0.4s;
+  transition: all 0.1s;
 }
-.info__subscribe-btn:hover {
+.info__subscribe-btn:active {
   background: none;
   color: #253137;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #C4C4C4;
+}
+.footer__left {
+  margin-top: 30px;
+}
+.footer__text {
+  margin-top: 30px;
+  color: #8F95A5;
+  font-size: calc(8px + 0.5714285714vw);
+}
+@media screen and (max-width: 575px) {
+  .footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,20 @@
+.footer {
+    &__content {
+        @include flex();
+        border-top: 1px solid #C4C4C4;
+    }
+    &__left {
+        margin-top: 30px;
+    }
+    &__text {
+        margin-top: 30px;
+        color: $gray;
+        font-size: calc(8px + 8  * (100vw / 1400));
+    }
+    @media screen and (max-width: 575px) {
+        &__content{
+            @include flex(center, center);
+            flex-direction: column;
+        }
+    }
+}

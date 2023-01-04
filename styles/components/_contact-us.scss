@@ -66,10 +66,11 @@
         background: $mainColor;
         color: $white;
         border-radius: $borderRadius;
-        transition: all 0.4s;
-        &:hover{
+        transition: all 0.1s;
+        &:active{
             background: none;
             color: $mainColor;
         }
+
     }
 }
