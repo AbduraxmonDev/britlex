@@ -1,0 +1,75 @@
+.contactus-section {
+    margin-top: 120px;
+    scroll-margin-top: 130px;
+    &__content {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 50px;
+    }
+    &__img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+    @media screen and (max-width: 722px) {
+        margin-top: 40px;
+        &__content{
+            @include flex();
+            flex-direction: column;
+        }
+    }
+}
+.img {
+    &__picture {
+        width: calc(225px + 150 * (100vw / 1400));
+    }
+}
+.contact-us {
+    &__title {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+    }
+    &__info {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    @media screen and (max-width: 722px){
+        &__title {
+            padding-bottom: 70px;
+        }
+        
+    }
+}
+.title {
+    &__name {
+        font-size:   calc(8px + 35 * (100vw / 1400));
+    }
+}
+.info {
+    &__input {
+        padding-block: 20px;
+        padding-left: 20px;
+        padding-right: 80px;
+        border: 2px solid #8F95A5;
+        border-radius: $borderRadius;
+        margin-bottom: 10px;
+        &:focus{
+            border-color: rgb(182, 83, 83); 
+        }
+    }
+    &__subscribe-btn {
+        padding-block: 18px;
+        padding-inline: calc(40px + 20 * (100vw / 1400));
+        font-size: calc(14px + 4 * (100vw / 1400));
+        font-weight: 500;
+        background: $mainColor;
+        color: $white;
+        border-radius: $borderRadius;
+        transition: all 0.4s;
+        &:hover{
+            background: none;
+            color: $mainColor;
+        }
+    }
+}

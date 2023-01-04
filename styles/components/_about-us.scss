@@ -1,5 +1,6 @@
 .aboutus-section {
-    margin-block: 50px;
+    margin-block: 40px;
+    scroll-margin-top: 130px;
     &__content {
         @include flex();
     }
@@ -39,6 +40,12 @@
         @include flex();
         text-align: center;
     }
+    @media screen and (max-width: 400px) {
+        &__numbers {
+            @include flex(center , center);
+            flex-direction: column;
+        }
+    }
 }
 .pupils {
     &__number {
@@ -49,6 +56,12 @@
         p{
             color: $gray;
             font-size: calc(10px + 7 * (100vw / 1400)); 
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &__number {
+            margin-right: 0;
+            margin-bottom: 50px;
         }
     }
 }
@@ -63,6 +76,12 @@
             font-size: calc(10px + 7 * (100vw / 1400));
         }
     }
+    @media screen and (max-width: 400px) {
+        &__number {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+    }
 }
 .languages {
     &__number {
@@ -72,6 +91,11 @@
         p{
             color: $gray;
             font-size: calc(10px + 7 * (100vw / 1400));
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &__number {
+            margin-right: 0;
         }
     }
 }

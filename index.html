@@ -25,25 +25,25 @@
                 alt="logo"
               />
             </a>
-            <nav class="menu">
+            <nav class="menu" id="link">
               <ul class="menu__list">
-                <li class="menu__item">
-                  <a class="menu__link" href="#"> Home </a>
+                <li class="menu__item active" >
+                  <a class="menu__link " href="#home" > Home </a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#"> Skills </a>
+                <li class="menu__item active" >
+                  <a class="menu__link " href="#skills" > Skills </a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#"> About us </a>
+                <li class="menu__item active" >
+                  <a class="menu__link" href="#aboutus" > About us </a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#"> Pricing </a>
+                <li class="menu__item active" >
+                  <a class="menu__link" href="#pricing" > Pricing </a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="#"> Contacts </a>
+                <li class="menu__item active" >
+                  <a class="menu__link" href="#contacts" > Contacts </a>
                 </li>
               </ul>
-              <button class="header__button">Let's Talk</button>
+              <button class="header__button"  >Let's Talk</button>
             </nav>
             <button class="header__burger-btn" id="burger">
               <span></span><span></span><span></span>
@@ -52,7 +52,7 @@
         </div>
       </header>
       <main class="main">
-        <div class="language-section container">
+        <div class="language-section container" id="home">
           <div class="language-section__info">
             <div class="info__header">
               <h1 class="info__title">
@@ -80,7 +80,7 @@
             />
           </div>
         </div>
-        <div class="skills-section container">
+        <div class="skills-section container" id="skills">
           <h1 class="skills-section__title">Skills</h1>
           <div class="skills-section__content">
             <div class="skills-section__card sidebar">
@@ -152,7 +152,7 @@
             </div>
           </div>
         </div>
-        <div class="aboutus-section">
+        <div class="aboutus-section" id="aboutus">
           <div class="container">
             <h1 class="aboutus-section__title">About Us</h1>
             <div class="aboutus-section__content">
@@ -190,7 +190,7 @@
             </div>
           </div>
         </div>
-        <div class="pricing-section">
+        <div class="pricing-section" id="pricing">
           <div class="container">
             <h1 class="pricing-section__title">Pricing</h1>
             <div class="pricing-section__content">
@@ -253,6 +253,26 @@ from all over the world.
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="contactus-section" id="contacts">
+          <div class="container">
+            <div class="contactus-section__content">
+              <div class="contact-us__title">
+                <h1 class="title__name">Contact Us</h1>
+              </div>
+            <div class="contactus-section__img">
+              <img src="./assets/images/last-img.png" alt="image" class="img__picture">
+            </div>           
+            <div class="contact-us__info">
+               <p class="info__text">Discover your current English level by taking our free online English test.Sign up to our newsletter for learning tips and free resources</p>
+               <div id="error"></div>
+               <form action="#" class="info__search" id="form">
+                <input type="email" placeholder="Enter your email" class="info__input" id="mail" required>
+                <button class="info__subscribe-btn" type="submit">Subscribe</button>
+               </form>
+            </div>
+          </div>
           </div>
         </div>
       </main>

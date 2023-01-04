@@ -1,5 +1,6 @@
 .language-section {
-    margin-block:50px;
+    margin-block:40px;
+    scroll-margin-top: 150px;
     @include flex();
     &__info {
         @include flex(flex-start);

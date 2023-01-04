@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("burger").addEventListener("click", function() {
         document.querySelector("header").classList.toggle("open")
     })
+    
 })
 
 document.addEventListener('keydown', function(e){
@@ -9,3 +10,7 @@ document.addEventListener('keydown', function(e){
         document.querySelector("header").classList.remove("open")
     }
 }) ;
+
+document.getElementById("link").addEventListener("click", function() {
+    document.querySelector("header").classList.remove("open")
+})
