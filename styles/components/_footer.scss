@@ -15,6 +15,7 @@
         &__content{
             @include flex(center, center);
             flex-direction: column;
+            
         }
     }
 }
